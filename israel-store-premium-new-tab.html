@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISRAEL STORE — Wear It. Live It.</title>
+<style>
+:root{--black:#080808;--gold:#d9a52b;--cream:#f7f5f0;--line:#e8e6e1;--muted:#777}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}
+.top{height:34px;background:#050505;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 5%;font-size:11px;letter-spacing:.2px}.top span{color:#e4b344}.top a{color:#e4b344}
+.header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.head-main{height:82px;display:flex;align-items:center;gap:28px;padding:0 5%}.brand{display:flex;align-items:center;gap:10px;min-width:225px}.brandmark{width:42px;height:42px;border-radius:50%;background:#090909;color:#e3b23d;display:grid;place-items:center;font-size:19px;font-weight:900}.brand h1{font-size:20px;letter-spacing:1.5px;margin:0}.brand small{display:block;color:#888;font-size:9px;letter-spacing:2px;margin-top:3px}
+.search{height:43px;flex:1;border:1px solid #ddd;display:flex;border-radius:4px;overflow:hidden;max-width:620px}.search select{border:0;border-right:1px solid #eee;padding:0 13px;background:#fff;color:#555}.search input{flex:1;border:0;padding:0 15px;outline:0}.search button{width:48px;border:0;background:#090909;color:#fff}
+.head-icons{display:flex;gap:22px;margin-left:auto;align-items:center}.head-icons div{text-align:center;font-size:11px}.head-icons b{display:block;font-size:20px;font-weight:400;margin-bottom:2px}.cartnum{color:#b88418;font-weight:800}
+.nav{height:48px;border-top:1px solid #f1f1f1;display:flex;align-items:center;padding:0 5%;gap:35px;font-size:12px;font-weight:800;letter-spacing:.4px}.nav a:hover{color:#b37d14}.category{background:#080808;color:#fff;padding:13px 25px;margin-left:0}.category span{color:#e1ad37;margin-right:8px}
+.hero{background:#070707;color:#fff;overflow:hidden}.hero-inner{min-height:545px;display:grid;grid-template-columns:1fr 1.2fr 310px;gap:20px;align-items:center;padding:45px 5%}.hero-copy .eyebrow{color:#dcae39;font-size:11px;font-weight:900;letter-spacing:3px}.hero-copy h2{font-size:clamp(45px,5.5vw,76px);line-height:.93;margin:17px 0;letter-spacing:-3px}.hero-copy h2 span{color:#e0aa35}.hero-copy p{color:#bbb;line-height:1.7;max-width:470px;font-size:14px}.buttons{display:flex;gap:12px;margin-top:25px}.goldbtn,.outlinebtn{padding:14px 24px;border:1px solid #d9a52b;font-weight:900;font-size:11px}.goldbtn{background:#d9a52b;color:#080808}.outlinebtn{background:transparent;color:#fff}.hero-products{height:450px;position:relative;display:flex;align-items:end;justify-content:center}.glow{position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,#75531c55,transparent 68%)}.hero-img{position:relative;z-index:2;width:390px;height:420px;object-fit:cover;object-position:center;border-radius:190px 190px 12px 12px;filter:saturate(1.05);box-shadow:0 25px 70px #000}
+.float-card{position:absolute;z-index:4;background:#fff;color:#111;padding:12px 15px;border-radius:4px;box-shadow:0 15px 30px #0008;font-size:10px;font-weight:900}.float1{top:45px;left:2px}.float2{right:4px;bottom:55px}.pay{border:1px solid #d3a23c;border-radius:12px;padding:20px;background:linear-gradient(145deg,#121212,#050505);box-shadow:0 12px 35px #000}.pay h3{text-align:center;color:#e3b13e;margin:0 0 3px;font-size:20px}.pay p{text-align:center;color:#999;font-size:10px;margin:0 0 18px}.opay{background:#fff;border-radius:10px;padding:17px;color:#111}.opay-top{display:flex;justify-content:space-between;align-items:center}.opay-logo{color:#16b78c;font-size:23px;font-weight:900}.opay-number{font-size:18px;font-weight:900}.opay-name{text-align:center;font-size:10px;font-weight:900;margin:13px 0}.copy{display:block;width:100%;border:0;background:#dba934;padding:9px;font-size:10px;font-weight:900;border-radius:4px}.pay-methods{display:flex;justify-content:center;gap:12px;color:#bbb;font-size:10px;margin-top:15px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 5%;background:#0a0a0a;color:#fff;border-top:1px solid #292929}.trust div{display:flex;gap:12px;align-items:center;justify-content:center}.trust strong{display:block;font-size:11px}.trust small{color:#888;font-size:9px}
+.categories{padding:32px 5%}.catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat{height:108px;border-radius:7px;overflow:hidden;position:relative;background:#eee}.cat img{width:100%;height:100%;object-fit:cover;transition:.4s}.cat:hover img{transform:scale(1.06)}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,#000b)}.cat span{position:absolute;z-index:2;bottom:13px;left:15px;color:#fff;font-weight:900;font-size:11px}
+.deals{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 5% 38px}.deal{border:1px solid #eee;padding:17px;border-radius:8px;background:#fff}.deal .icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f4ead2;margin-bottom:9px}.deal h4{margin:0;font-size:13px}.deal p{font-size:10px;color:#777;margin:5px 0 0}
+.section{padding:48px 5%}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}.section-head h3{font-size:25px;margin:0}.section-head p{color:#888;font-size:11px;margin:6px 0 0}.view{font-size:11px;font-weight:900}.products{display:grid;grid-template-columns:repeat(5,1fr);gap:17px}.product{position:relative}.pimg{height:275px;background:#f5f5f3;border-radius:7px;overflow:hidden;position:relative}.pimg img{width:100%;height:100%;object-fit:cover;transition:.4s}.product:hover .pimg img{transform:scale(1.05)}.tag{position:absolute;top:10px;left:10px;background:#fff;padding:6px 8px;font-size:9px;font-weight:900;z-index:2}.tag.sale{background:#d62e2e;color:#fff}.heart{position:absolute;top:10px;right:10px;width:31px;height:31px;border:0;border-radius:50%;background:#fff;z-index:3}.pinfo{padding:11px 2px}.pinfo .brandline{font-size:9px;color:#999;text-transform:uppercase;letter-spacing:.7px}.pinfo h4{font-size:12px;margin:6px 0}.price{font-size:14px;font-weight:900}.old{color:#aaa;text-decoration:line-through;font-size:10px;margin-left:5px;font-weight:400}.add{width:100%;margin-top:10px;background:#080808;color:#fff;border:0;padding:11px;font-size:10px;font-weight:900;border-radius:3px}.add:hover{background:#d9a52b;color:#111}
+.style-banner{margin:0 5% 45px;min-height:300px;background:#080808;color:#fff;border-radius:8px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}.style-copy{padding:55px}.style-copy small{color:#dcae39;letter-spacing:2px;font-weight:900}.style-copy h3{font-size:43px;line-height:.98;margin:14px 0}.style-copy p{color:#aaa;max-width:400px;font-size:12px;line-height:1.7}.style-banner img{width:100%;height:100%;object-fit:cover;min-height:300px}
+.footer{background:#080808;color:#fff;padding:48px 5% 25px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:35px}.footer h4{font-size:12px;margin:0 0 14px}.footer p,.footer a{color:#999;font-size:11px;line-height:1.7;display:block;margin:5px 0}.footbrand{font-size:20px;letter-spacing:1px}.bottom{border-top:1px solid #272727;margin-top:35px;padding-top:18px;color:#777;font-size:9px;display:flex;justify-content:space-between}
+.drawer{position:fixed;top:0;right:-430px;width:min(430px,100%);height:100%;background:#fff;z-index:100;padding:25px;box-shadow:-10px 0 40px #0004;transition:.3s;overflow:auto}.drawer.open{right:0}.shade{display:none;position:fixed;inset:0;background:#0009;z-index:90}.shade.show{display:block}.drawer h2{margin-top:0}.item{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid #eee;font-size:12px}.remove{border:1px solid #ddd;background:#fff;padding:6px}.total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin:20px 0}.checkout{width:100%;border:0;background:#080808;color:#fff;padding:15px;font-weight:900}.note{font-size:10px;color:#888;line-height:1.6}
+@media(max-width:1050px){.hero-inner{grid-template-columns:1fr 1fr}.pay{display:none}.products{grid-template-columns:repeat(3,1fr)}.catgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.top{display:none}.head-main{height:auto;padding:15px 4%;flex-wrap:wrap}.brand{min-width:auto}.search{order:3;max-width:none;flex-basis:100%}.head-icons{gap:8px}.nav{overflow:auto;gap:20px;padding:0 4%}.category{display:none}.hero-inner{grid-template-columns:1fr;text-align:center;padding:50px 5%}.hero-copy p{margin:auto}.buttons{justify-content:center}.hero-products{height:380px}.hero-img{width:280px;height:330px}.trust{grid-template-columns:1fr}.catgrid,.products{grid-template-columns:repeat(2,1fr)}.deals{grid-template-columns:1fr 1fr}.style-banner{grid-template-columns:1fr}.style-banner img{height:250px}.style-copy{padding:35px}.footgrid{grid-template-columns:1fr 1fr}.bottom{display:block}}
+@media(max-width:430px){.catgrid{grid-template-columns:1fr 1fr}.pimg{height:220px}.deals{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr}.hero-copy h2{font-size:47px}}
+</style>
+</head>
+<body>
+<div class="top"><span>🚚 FREE DELIVERY on orders over ₦30,000</span><span><a href="https://wa.me/2348133809310" target="_blank" rel="noopener">💬 WhatsApp</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="mailto:israeltolulope989@gmail.com" target="_blank" rel="noopener">Email Us</a> &nbsp;&nbsp; | &nbsp;&nbsp; <button onclick="openStoreTab()" style="border:0;background:none;color:#e4b344;padding:0;cursor:pointer">↗ Open Store in New Tab</button></span></div>
+
+<header class="header">
+<div class="head-main">
+<a class="brand" href="#"><div class="brandmark">IS</div><div><h1>ISRAEL STORE</h1><small>WEAR IT. LIVE IT.</small></div></a>
+<div class="search"><select><option>All Categories</option><option>Clothing</option><option>Shoes</option><option>Watches</option><option>Bags</option><option>Accessories</option></select><input placeholder="Search for products..."><button>⌕</button></div>
+<div class="head-icons"><div><b>♡</b>Wishlist</div><div onclick="openCart()" style="cursor:pointer"><b>🛒</b>Cart <span class="cartnum" id="cartCount">₦0</span></div></div>
+</div>
+<nav class="nav"><a class="category" href="#categories"><span>☰</span> SHOP BY CATEGORY</a><a href="#">HOME</a><a href="#shop">SHOP⌄</a><a href="#new">NEW ARRIVALS <sup style="background:#ef3c3c;color:#fff;padding:2px 4px;border-radius:3px">HOT</sup></a><a href="#shop">BEST SELLERS</a><a href="#deals">DEALS <sup style="background:#27a45a;color:#fff;padding:2px 4px;border-radius:3px">SALE</sup></a><a href="#about">ABOUT US</a><a href="#contact">CONTACT US</a></nav>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-copy"><div class="eyebrow">PREMIUM FASHION • LIFESTYLE • EVERYDAY</div><h2>DISCOVER STYLE<br>THAT <span>DEFINES YOU</span></h2><p>Premium quality wears, shoes, watches and more — carefully selected for your style and made for everyday confidence.</p><div class="buttons"><a class="goldbtn" href="#shop">SHOP NOW →</a><a class="outlinebtn" href="#categories">VIEW COLLECTION</a><button class="outlinebtn" onclick="openStoreTab()">↗ NEW TAB</button></div></div>
+<div class="hero-products"><div class="glow"></div><img class="hero-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=90" alt="Premium watch"><div class="float-card float1">✦ NEW ARRIVALS</div><div class="float-card float2">PREMIUM PICKS</div></div>
+<div class="pay"><h3>PAY SECURELY</h3><p>Multiple payment options</p><div class="opay"><div class="opay-top"><span class="opay-logo">◉ OPay</span><span class="opay-number">7017410048</span></div><div class="opay-name">ISRAEL TOLULOPE FABUSOLA</div><button class="copy" onclick="copyPay()">▣ COPY PAYMENT DETAILS</button></div><div class="pay-methods">💳 Visa &nbsp; • &nbsp; Mastercard &nbsp; • &nbsp; Bank Transfer</div></div>
+</div>
+<div class="trust"><div>🛡️ <span><strong>100% ORIGINAL</strong><small>Authentic Products</small></span></div><div>🚚 <span><strong>FAST DELIVERY</strong><small>Across Nigeria</small></span></div><div>♧ <span><strong>24/7 SUPPORT</strong><small>We're Here to Help</small></span></div></div>
+</section>
+
+<section class="categories" id="categories"><div class="catgrid">
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=500&q=85"><span>CLOTHING　→</span></a>
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=85"><span>SHOES　→</span></a>
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=85"><span>WATCHES　→</span></a>
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=85"><span>BAGS　→</span></a>
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=500&q=85"><span>ACCESSORIES　→</span></a>
+<a class="cat" href="#shop"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=500&q=85"><span>LIFESTYLE　→</span></a>
+</div></section>
+
+<section class="deals" id="deals">
+<div class="deal"><div class="icon">✦</div><h4>NEW ARRIVALS</h4><p>Check out our latest collections</p></div>
+<div class="deal"><div class="icon">🔥</div><h4>HOT DEALS</h4><p>Save on selected items</p></div>
+<div class="deal"><div class="icon">🏆</div><h4>BEST SELLERS</h4><p>Customer favorites this season</p></div>
+<div class="deal"><div class="icon">🚚</div><h4>FREE DELIVERY</h4><p>On orders over ₦30,000</p></div>
+</section>
+
+<section class="section" id="shop"><div class="section-head"><div><h3>FEATURED PRODUCTS</h3><p>Handpicked pieces our customers love.</p></div><a class="view" href="#">VIEW ALL →</a></div>
+<div class="products" id="products"></div></section>
+
+<section class="style-banner" id="new"><div class="style-copy"><small>MAKE AN IMPRESSION</small><h3>STYLE IS A<br><span style="color:#d9a52b">STATEMENT.</span></h3><p>Build a look that feels unmistakably yours. Discover watches, footwear, clothing and accessories selected for modern everyday style.</p><a class="goldbtn" href="#shop">SHOP NOW</a></div><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=90" alt="Fashion style"></section>
+
+<section class="section" id="about" style="background:#f8f7f4"><div class="section-head"><div><h3>WHY SHOP ISRAEL STORE?</h3><p>Simple shopping, quality products and support when you need it.</p></div></div><div class="deals" style="padding:0"><div class="deal"><div class="icon">✓</div><h4>AUTHENTIC PRODUCTS</h4><p>We focus on quality and great presentation.</p></div><div class="deal"><div class="icon">🔒</div><h4>SECURE PAYMENT</h4><p>OPay and other payment options.</p></div><div class="deal"><div class="icon">↩</div><h4>EASY RETURNS</h4><p>Contact us for order support.</p></div><div class="deal"><div class="icon">♡</div><h4>CUSTOMER SATISFACTION</h4><p>We're here to help before and after purchase.</p></div></div></section>
+
+<footer class="footer" id="contact"><div class="footgrid"><div><div class="footbrand">ISRAEL STORE</div><p>WEAR IT. LIVE IT.</p><p>Premium fashion, footwear, watches, accessories and lifestyle essentials.</p></div><div><h4>SHOP</h4><a href="#shop">Clothing</a><a href="#shop">Shoes</a><a href="#shop">Watches</a><a href="#shop">Bags</a></div><div><h4>HELP</h4><a href="#about">About Us</a><a href="#contact">Delivery</a><a href="#contact">Returns</a><a href="#contact">Contact</a></div><div><h4>CONTACT</h4><p>Lagos, Nigeria</p><p><a href="tel:+2348133809310" target="_blank" rel="noopener">08133809310</a></p><p><a href="mailto:israeltolulope989@gmail.com" target="_blank" rel="noopener">israeltolulope989@gmail.com</a></p><p>OPay: 7017410048</p><p>Account: ISRAEL TOLULOPE FABUSOLA</p></div></div><div class="bottom"><span>© 2026 ISRAEL STORE. All rights reserved.</span><span>Secure shopping • Lagos, Nigeria</span></div></footer>
+
+<div class="shade" id="shade" onclick="closeCart()"></div><aside class="drawer" id="drawer"><h2>Your Cart <button onclick="closeCart()" style="float:right;border:0;background:#fff;font-size:25px">×</button></h2><div id="cartItems"></div><div class="total"><span>Total</span><span id="total">₦0</span></div><button class="checkout" onclick="orderWhatsApp()">ORDER VIA WHATSAPP</button><p class="note">Payment: OPay 7017410048 — ISRAEL TOLULOPE FABUSOLA. Confirm your order before making payment.</p></aside>
+
+<script>
+const products=[
+["Curren Luxury Watch","Watches",24000,"28000","https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=90","-15%"],
+["Classic White Sneakers","Shoes",52000,"65000","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=90","SALE"],
+["Premium Black Hoodie","Clothing",23000,"27000","https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=90","NEW"],
+["Leather Crossbody Bag","Bags",18000,"22000","https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=90",""],
+["Modern Running Shoes","Shoes",58000,"","https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=90","NEW"],
+["Premium Fragrance","Lifestyle",42000,"","https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=90",""]
+];
+let cart=[];
+const money=n=>"₦"+Number(n).toLocaleString();
+function render(){document.getElementById("products").innerHTML=products.map((p,i)=>`<article class="product"><div class="pimg"><span class="tag ${p[5].includes('%')?'sale':''}">${p[5]||'FEATURED'}</span><button class="heart">♡</button><img src="${p[4]}" alt="${p[0]}"></div><div class="pinfo"><div class="brandline">${p[1]}</div><h4>${p[0]}</h4><div class="price">${money(p[2])}${p[3]?` <span class="old">${money(p[3])}</span>`:''}</div><button class="add" onclick="add(${i})">🛒 ADD TO CART</button></div></article>`).join("")}
+function add(i){cart.push(products[i]);update();openCart()}
+function update(){document.getElementById("cartCount").textContent=money(cart.reduce((s,p)=>s+p[2],0));document.getElementById("cartItems").innerHTML=cart.length?cart.map((p,i)=>`<div class="item"><span><b>${p[0]}</b><br><small>${money(p[2])}</small></span><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join(""):"<p class='note'>Your cart is empty.</p>";document.getElementById("total").textContent=money(cart.reduce((s,p)=>s+p[2],0))}
+function removeItem(i){cart.splice(i,1);update()}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("shade").classList.add("show")}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("shade").classList.remove("show")}
+function copyPay(){navigator.clipboard.writeText("OPay: 7017410048 | Account Name: ISRAEL TOLULOPE FABUSOLA");alert("Payment details copied.")}
+function orderWhatsApp(){if(!cart.length){alert("Your cart is empty.");return}let lines=cart.map(p=>"• "+p[0]+" — "+money(p[2])).join("%0A");let total=money(cart.reduce((s,p)=>s+p[2],0));let msg="Hello ISRAEL STORE,%0A%0AI would like to order:%0A"+lines+"%0A%0ATotal: "+total+"%0A%0APayment: OPay%0AAccount Name: ISRAEL TOLULOPE FABUSOLA%0AAccount Number: 7017410048";const a=document.createElement("a"); a.href="https://wa.me/2348133809310?text="+msg; a.target="_blank"; a.rel="noopener"; document.body.appendChild(a); a.click(); a.remove()}
+function openStoreTab(){
+  const w=window.open(window.location.href,"_blank","noopener");
+  if(!w){ alert("Your browser blocked the new tab. Please allow pop-ups for this site."); }
+}
+render();update();
+</script>
+</body>
+</html>
